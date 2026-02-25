@@ -1,0 +1,27 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "outDir": ".test-dist",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "ES2020",
+    "incremental": false,
+    "tsBuildInfoFile": ".test-dist/tsconfig.tsbuildinfo"
+  },
+  "include": [
+    "tests/**/*.ts",
+    "functions/lib/recommendationHelpers.ts",
+    "functions/lib/recommendationHandlers.ts",
+    "functions/lib/userHandlers.ts",
+    "functions/lib/userHelpers.ts",
+    "functions/types/role.ts",
+    "src/lib/recommendationValidation.ts",
+    "src/lib/validators/url.ts",
+    "src/components/shared/enums/genre.ts",
+    "src/components/shared/types/recommendation.ts",
+    "src/components/shared/types/role.ts",
+    "functions/_generated/dataModel.d.ts",
+    "functions/_generated/server.d.ts"
+  ]
+}

@@ -1,0 +1,53 @@
+@reference "../../../app/globals.css";
+
+.container {
+  @apply max-w-2xl;
+}
+
+.title {
+  @apply mb-6 text-2xl font-bold text-white;
+}
+
+.form {
+  @apply space-y-4 rounded-lg border border-slate-700 bg-slate-800 p-6;
+}
+
+.label {
+  @apply mb-1 block text-sm font-medium text-slate-300;
+}
+
+.inputBase {
+  @apply w-full rounded-lg border bg-slate-700 px-4 py-2 text-white placeholder-slate-500 focus:border-blue-400 focus:outline-none;
+}
+
+.inputOk {
+  @apply border-slate-600;
+}
+
+.inputError {
+  @apply border-red-400;
+}
+
+.textarea {
+  @apply resize-none;
+}
+
+.errorText {
+  @apply mt-1 text-sm text-red-300;
+}
+
+.serverError {
+  @apply rounded-md border border-red-500/40 bg-red-500/10 px-3 py-2 text-sm text-red-200;
+}
+
+.actions {
+  @apply flex gap-2;
+}
+
+.primaryButton {
+  @apply rounded-lg bg-blue-600 px-6 py-2 font-semibold text-white transition hover:bg-blue-700 disabled:bg-blue-400;
+}
+
+.secondaryButton {
+  @apply rounded-lg bg-slate-700 px-6 py-2 font-semibold text-white transition hover:bg-slate-600;
+}

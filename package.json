@@ -6,12 +6,18 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test": "rm -rf .test-dist && tsc -p tsconfig.tests.json && node --test .test-dist/tests/*.test.js .test-dist/tests/functions/*.test.js && rm -rf .test-dist"
   },
   "dependencies": {
+    "@clerk/nextjs": "^6.38.2",
+    "@clerk/types": "^4.101.18",
+    "convex": "^1.32.0",
+    "lucide-react": "^0.575.0",
     "next": "16.1.6",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "svix": "^1.86.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

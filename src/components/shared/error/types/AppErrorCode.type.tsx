@@ -1,0 +1,1 @@
+export type AppErrorCode = "CANNOT_DEMOTE_SELF" | "USER_NOT_FOUND" | "INVALID_NAME";

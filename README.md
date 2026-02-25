@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# HypeShelf
 
-## Getting Started
+HypeShelf is a Next.js app for sharing recommendations, with Clerk authentication and a Convex backend.
 
-First, run the development server:
+## Tech Stack
+
+- Next.js 16 (App Router)
+- React 19 + TypeScript
+- Clerk for auth
+- Convex for functions and data
+- CSS Modules + global styles
+
+## Quick Start
+
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+2. Add `.env.local`:
+
+```env
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_...
+CLERK_SECRET_KEY=sk_test_...
+NEXT_PUBLIC_CONVEX_URL=https://<your-deployment>.convex.cloud
+CLERK_WEBHOOK_SECRET=whsec_...
+```
+
+3. Start Convex dev in one terminal:
+
+```bash
+npx convex dev
+```
+
+4. Start Next.js in another terminal:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Open `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `npm run dev` - run Next.js locally
+- `npm run build` - production build
+- `npm start` - start production server
+- `npm run lint` - ESLint checks
+- `npm test` - Node test suite (`tests/` + `tests/functions/`)
 
-## Learn More
+## Documentation
 
-To learn more about Next.js, take a look at the following resources:
+All project docs (except this root `README.md`) are in [`docs/`](./docs):
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [`docs/START_HERE.md`](./docs/START_HERE.md)
+- [`docs/SETUP.md`](./docs/SETUP.md)
+- [`docs/ARCHITECTURE.md`](./docs/ARCHITECTURE.md)
+- [`docs/FUNCTIONS.md`](./docs/FUNCTIONS.md)
+- [`docs/DOCUMENTATION_INDEX.md`](./docs/DOCUMENTATION_INDEX.md)
+- [`docs/WELCOME.txt`](./docs/WELCOME.txt)
